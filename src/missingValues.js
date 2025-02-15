@@ -1,4 +1,4 @@
-const MissingValues = (data, strategy = 'mean', fillValue = 0) => {
+const CleanMissings = (data, strategy = 'mean', fillValue = 0) => {
     const cleanData = data.filter(val => val !== null && !isNaN(val));
     
     if (cleanData.length === 0) return data.fill(fillValue);
@@ -24,4 +24,4 @@ const MissingValues = (data, strategy = 'mean', fillValue = 0) => {
     return data.map(val => val === null || isNaN(val) ? replacement : val);
   };
   
-  module.exports = MissingValues;
+  module.exports = CleanMissings;
