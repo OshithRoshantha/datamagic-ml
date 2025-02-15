@@ -1,0 +1,35 @@
+{
+  "name": "datamagic-ml",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [
+    "feature engineering",
+    "machine learning",
+    "data preprocessing",
+    "normalization",
+    "standardization",
+    "one-hot encoding",
+    "missing values",
+    "data science",
+    "javascript",
+    "scikit-learn",
+    "data transformation",
+    "ml preprocessing",
+    "data cleaning",
+    "data wrangling",
+    "ai",
+    "artificial intelligence",
+    "data pipeline",
+    "data normalization",
+    "data standardization"
+  ],
+  "author": "Oshith Roshantha",
+  "license": "ISC",
+  "description": "A lightweight JavaScript library for essential feature engineering tasks in machine learning. Provides utilities for normalization, standardization, one-hot encoding and missing value handling. Designed for simplicity and performance in both Node.js and browser environments.",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
