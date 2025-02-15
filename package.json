@@ -27,7 +27,7 @@
     "data standardization"
   ],
   "author": "Oshith Roshantha",
-  "license": "ISC",
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/OshithRoshantha/datamagic-ml"
