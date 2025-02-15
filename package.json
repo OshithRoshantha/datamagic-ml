@@ -28,6 +28,11 @@
   ],
   "author": "Oshith Roshantha",
   "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/OshithRoshantha/datamagic-ml"
+  },
+  "homepage": "https://github.com/OshithRoshantha/datamagic-ml#readme",
   "description": "A lightweight JavaScript library for essential feature engineering tasks in machine learning. Provides utilities for normalization, standardization, one-hot encoding and missing value handling. Designed for simplicity and performance in both Node.js and browser environments.",
   "devDependencies": {
     "jest": "^29.7.0"

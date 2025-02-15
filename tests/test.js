@@ -3,7 +3,7 @@ const {
     StandardScaler
   } = require('../src');
 
-  describe('Feature Engineering Utilities', () => {
+  describe('datamagic-ml', () => {
     test('Normalizes data', () => {
       const scaler = new MinMaxScaler();
       const data = [1, 2, 3, 4, 5];
