@@ -1,6 +1,7 @@
 const {
     MinMaxScaler,
-    StandardScaler
+    StandardScaler,
+    OneHotEncoder
   } = require('../src');
 
   describe('datamagic-ml', () => {
@@ -17,4 +18,12 @@ const {
         scaler.fit(data);
         expect(scaler.transform(data)).toEqual([-1.414213562373095, -0.7071067811865475, 0, 0.7071067811865475, 1.414213562373095]);
       });
+
+    test('Encoding data', () => {
+        const encoder = new OneHotEncoder();
+        const categories = ['red', 'green', 'blue'];
+        encoder.fit(categories);
+        const encoded = encoder.transform(['green', 'red', 'yellow', 'blue']);
+        expect(encoded).toEqual([[0,1,0],[1,0,0],[0,0,0],[0,0,1]]);
+    });      
   });
