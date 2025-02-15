@@ -1,7 +1,8 @@
 const {
     MinMaxScaler,
     StandardScaler,
-    OneHotEncoder
+    OneHotEncoder,
+    CleanMissings
   } = require('../src');
 
   describe('datamagic-ml', () => {
@@ -25,5 +26,12 @@ const {
         encoder.fit(categories);
         const encoded = encoder.transform(['green', 'red', 'yellow', 'blue']);
         expect(encoded).toEqual([[0,1,0],[1,0,0],[0,0,0],[0,0,1]]);
-    });      
+    }); 
+    
+    test('Handle missing data', () => {
+        const testArray = [1, null, 3, 4, NaN, 6];
+        expect(CleanMissings(testArray, 'mean')).toEqual([1, 3.5, 3, 4, 3.5, 6]);
+        expect(CleanMissings(testArray, 'median')).toEqual([1, 4, 3, 4, 4, 6]);
+        expect(CleanMissings(testArray, 'constant', 0)).toEqual([1, 0, 3, 4, 0, 6]);
+    });
   });
